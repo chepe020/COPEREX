@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { createBusiness, getBusinesses, updateBusiness, generateReport } from "./business.controller.js";
+import { registerBusiness, getBusinesses, modifyBusiness, generateBusinessReport } from "./business.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
  
@@ -18,7 +18,7 @@ router.post(
         check("phone", "El teléfono debe tener 8 caracteres").isLength({ min: 8, max: 8 }),
         validarCampos
     ],
-    createBusiness
+    registerBusiness
 );
  
 router.get(
@@ -42,7 +42,7 @@ router.put(
         check("phone", "El teléfono debe tener 8 caracteres").isLength({ min: 8, max: 8 }),
         validarCampos
     ],
-    updateBusiness
+    modifyBusiness
 );
  
 router.get(
@@ -50,7 +50,7 @@ router.get(
     [
         validarJWT,
     ],
-    generateReport
+    generateBusinessReport
 );
  
 export default router;

@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import { connectToDatabase } from './mongo.js';
+import { dbConnection } from './mongo.js';
 import requestLimiter from '../src/middlewares/validar-cant-peticiones.js';
 import authenticationRoutes from '../src/auth/auth.routes.js';
 import organizationRoutes from '../src/Business/businessroutes.js';
@@ -51,7 +51,7 @@ const createAdminUser = async () => {
  
 const initializeDatabaseConnection = async () => {
     try {
-        await connectToDatabase();
+        await dbConnection();
         console.log("Successfully connected to the database.");
     } catch (error) {
         console.error("Database connection error:", error);

@@ -1,4 +1,4 @@
-import Business from "../business.model.js";
+import Business from "./business.model.js";
 import ExcelJS from "exceljs";
  
 export const registerBusiness = async (req, res) => {
