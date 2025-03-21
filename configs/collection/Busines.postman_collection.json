@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "fb6c186e-9ee5-4562-8b53-388e11fb6039",
+		"name": "Busines",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37560259"
+	},
+	"item": [
+		{
+			"name": "busines reguistrar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2Q4ZjZmNThmMWRhOGQzNjA2YWY0OTgiLCJpYXQiOjE3NDI1Mzk1MDYsImV4cCI6MTc0MjU0MzEwNn0.zLMU9tU41RTzpNPYGphpWV5Wb9MKbQPuFdGmsBh4y-I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Kinal\",\r\n    \"influenceLevel\" : \"Nivel 3\",\r\n    \"experienceYears\" : 3,\r\n    \"industry\": \"Educativa\",\r\n    \"overview\": \"Centro educativo que imparte educacion basica y diversificada\",\r\n    \"email\": \"kinal@gmail.com\",\r\n    \"phone\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/coperex/v1/busines/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coperex",
+						"v1",
+						"busines",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "busines Editar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2Q4ZjZmNThmMWRhOGQzNjA2YWY0OTgiLCJpYXQiOjE3NDI1Mzk1MDYsImV4cCI6MTc0MjU0MzEwNn0.zLMU9tU41RTzpNPYGphpWV5Wb9MKbQPuFdGmsBh4y-I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Kinal\",\r\n    \"influenceLevel\" : \"Nivel 3\",\r\n    \"experienceYears\" : 3,\r\n    \"industry\": \"Educativa\",\r\n    \"overview\": \"Centro educativo que imparte educacion basica y diversificada\",\r\n    \"email\": \"kinal@gmail.com\",\r\n    \"phone\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/coperex/v1/busines/:id?=67dd0b6e80e082ee07d6f5b5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coperex",
+						"v1",
+						"busines",
+						":id"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "67dd0b6e80e082ee07d6f5b5"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67dd0b6e80e082ee07d6f5b5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "busines Mostrar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2Q4ZjZmNThmMWRhOGQzNjA2YWY0OTgiLCJpYXQiOjE3NDI1Mzk1MDYsImV4cCI6MTc0MjU0MzEwNn0.zLMU9tU41RTzpNPYGphpWV5Wb9MKbQPuFdGmsBh4y-I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/coperex/v1/busines/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coperex",
+						"v1",
+						"busines",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "busines Reporte",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2Q4ZjZmNThmMWRhOGQzNjA2YWY0OTgiLCJpYXQiOjE3NDI1Mzk1MDYsImV4cCI6MTc0MjU0MzEwNn0.zLMU9tU41RTzpNPYGphpWV5Wb9MKbQPuFdGmsBh4y-I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/coperex/v1/busines/report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coperex",
+						"v1",
+						"busines",
+						"report"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -125,7 +125,7 @@ export const generateBusinessReport = async (req, res) => {
         });
  
         res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        res.setHeader('Content-Disposition', 'attachment; filename=Reporte_Negocios.xlsx');
+        res.setHeader('Content-Disposition', 'attachment; filename=Reporte.xlsx');
         await workbook.xlsx.write(res);
         res.end();
     } catch (error) {

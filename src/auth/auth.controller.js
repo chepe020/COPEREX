@@ -16,7 +16,7 @@ export const login = async (req, res) => {
             });
         }
  
-        if (!user.status) {
+        if (!user.isActive) {
             return res.status(400).json({
                 msg: "El usuario está inactivo"
             });

@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "67dd0b6e80e082ee07d6f5b5"
+  },
+  "title": "Kinal",
+  "influenceLevel": "Nivel 3",
+  "experienceYears": 3,
+  "industry": "Educativa",
+  "overview": "Centro educativo que imparte educacion basica y diversificada",
+  "email": "kinal@gmail.com",
+  "phone": "12345678",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-03-21T06:47:10.467Z"
+  },
+  "__v": 0
+}]

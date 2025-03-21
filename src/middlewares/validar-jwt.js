@@ -12,7 +12,7 @@ export async function validarJWT(req, res, next) {
         const { uid } = jwt.verify(token, process.env.SECRETORPRIVATEKEY);
         const usuario = await Usuario.findById(uid);
 
-        if (!usuario || !usuario.status) {
+        if (!usuario || !usuario.isActive) {
             return res.status(401).json({
                 msg: !usuario
                     ? "Usuario no existente en la base de datos"

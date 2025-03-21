@@ -19,8 +19,8 @@ const setupMiddlewares = (application) => {
 };
  
 const setupRoutes = (application) => {
-    application.use("/companySystem/v1/auth", authenticationRoutes);
-    application.use("/companySystem/v1/companies", organizationRoutes);
+    application.use("/coperex/v1/auth", authenticationRoutes);
+    application.use("/coperex/v1/busines", organizationRoutes);
 };
  
 const createAdminUser = async () => {
@@ -28,11 +28,11 @@ const createAdminUser = async () => {
         const existingAdmin = await User.findOne({ email: "admin@gmail.com" });
  
         if (!existingAdmin) {
-            const hashedPassword = await hash("Admin123");
+            const hashedPassword = await hash("12345678");
  
             const newAdmin = new User({
-                name: "Admin",
-                surname: "Principal",
+                name: "admin",
+                surname: "principal",
                 username: "admin",
                 email: "admin@gmail.com",
                 phone: "12345678",
@@ -40,12 +40,12 @@ const createAdminUser = async () => {
             });
  
             await newAdmin.save();
-            console.log("Administrator successfully created.");
+            console.log("Administrado creado exitosamente");
         } else {
-            console.log("Administrator already exists.");
+            console.log("Administrador Ya existe ");
         }
     } catch (error) {
-        console.error("Error creating the administrator:", error);
+        console.error("Error al crear el Administrador:", error);
     }
 };
  
